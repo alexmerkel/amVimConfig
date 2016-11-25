@@ -2,18 +2,16 @@
 
 set number	" Show line numbers
 
-set linebreak " Break lines at word (requires Wrap lines)
+set linebreak	" Break lines at word (requires Wrap lines)
 set showbreak=+++	" Wrap-broken line prefix
 set textwidth=100	" Line wrap (number of cols)
 set showmatch	" Highlight matching brace
 
 set autoindent	" Auto-indent new lines
-set shiftwidth=4	" Number of auto-indent spaces
 set smartindent	" Enable smart-indent
 
 "" Advanced
 set ruler	" Show row and column ruler information
-set showtabline=2	" Show tab bar
 
 set undolevels=1000	" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
@@ -120,4 +118,5 @@ set wrapscan
 
 " Show whitespace
 set listchars=tab:▸\ ,eol:¬,space:·
+set tabstop=4
 set list
