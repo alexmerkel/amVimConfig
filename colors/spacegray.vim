@@ -31,7 +31,7 @@ if g:spacegray_italicize_comments
 else
   hi Comment       ctermbg=NONE ctermfg=59     guibg=NONE     guifg=#515F6A  cterm=NONE      gui=NONE
 endif
-hi NonText         ctermbg=NONE ctermfg=8      guibg=NONE     guifg=#3E4853  cterm=NONE      gui=NONE
+hi NonText         ctermbg=NONE ctermfg=59      guibg=NONE     guifg=#4C5966  cterm=NONE      gui=NONE
 hi Title           ctermbg=NONE ctermfg=231    guibg=NONE     guifg=#FFFFFF  cterm=NONE      gui=NONE
 
 hi Constant        ctermbg=NONE ctermfg=130    guibg=NONE     guifg=#C5735E  cterm=NONE      gui=NONE
@@ -157,3 +157,6 @@ hi link rubyRailsARClassMethod        Statement
 " Diff
 hi link diffAdded           String
 hi link diffRemoved         Function
+
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
