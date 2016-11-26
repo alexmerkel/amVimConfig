@@ -31,10 +31,6 @@ ino <right> <Nop>
 filetype plugin on
 filetype indent on
 
-
-" :W sudo saves the file
-command W w !sudo tee % > /dev/null
-
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
@@ -120,3 +116,27 @@ set wrapscan
 set listchars=tab:▸\ ,eol:¬,space:·
 set tabstop=4
 set list
+
+
+" VUNDLE
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+
+" syntax checking
+Plugin 'scrooloose/syntastic'
+
+
+" Finishing up
+call vundle#end()            " required
+filetype plugin indent on    " required
+" END OF VUNDLE SETUP
