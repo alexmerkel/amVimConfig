@@ -1,20 +1,17 @@
 " amVimConfig
 
-set number	" Show line numbers
+set number    " Show line numbers
 
-set linebreak	" Break lines at word (requires Wrap lines)
-set showbreak=+++	" Wrap-broken line prefix
-set textwidth=100	" Line wrap (number of cols)
-set showmatch	" Highlight matching brace
-
-set autoindent	" Auto-indent new lines
-set smartindent	" Enable smart-indent
+set linebreak    " Break lines at word (requires Wrap lines)
+set showbreak=+++    " Wrap-broken line prefix
+set textwidth=100    " Line wrap (number of cols)
+set showmatch    " Highlight matching brace
 
 "" Advanced
-set ruler	" Show row and column ruler information
+set ruler    " Show row and column ruler information
 
-set undolevels=1000	" Number of undo levels
-set backspace=indent,eol,start	" Backspace behaviour
+set undolevels=1000    " Number of undo levels
+set backspace=indent,eol,start    " Backspace behaviour
 
 " Disable arrow keys
 no <up> <Nop>
@@ -27,18 +24,11 @@ ino <down> <Nop>
 ino <left> <Nop>
 ino <right> <Nop>
 
-" Enable filetype plugins
-filetype plugin on
-filetype indent on
-
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
 let $LANG='en'
 set langmenu=en
-
-" Height of the command bar
-set cmdheight=2
 
 " Highlight search results
 set hlsearch
@@ -55,7 +45,7 @@ set tm=500
 syntax enable
 
 if $COLORTERM == 'gnome-terminal'
-	set t_Co=256
+    set t_Co=256
 endif
 
 colorscheme spacegray
@@ -65,11 +55,12 @@ set background=dark
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
+" Use macOS Clipboard
+set clipboard=unnamed
+
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
-set ai "Auto indent
-set si "Smart indent
 set wrap "Wrap lines
 
 " Change esc to ii
@@ -80,24 +71,25 @@ imap ;; <Esc>
 map <space> /
 map <c-space> ?
 
-" Move a line of text using ALT+[jk] or Command+[jk] on mac
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 
 if has("mac") || has("macunix")
-	nmap <D-j> <M-j>
-	nmap <D-k> <M-k>
-	vmap <D-j> <M-j>
-	vmap <D-k> <M-k>
+    nnoremap <D-J> <C-J>
+    nnoremap <D-K> <C-K>
+    nnoremap <D-L> <C-L>
+    nnoremap <D-H> <C-H>
 endif
 
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
 func! DeleteTrailingWS()
-	exe "normal mz"
-	%s/\s\+$//ge
-	exe "normal `z"
+    exe "normal mz"
+    %s/\s\+$//ge
+    exe "normal `z"
 endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
@@ -114,9 +106,14 @@ set wrapscan
 
 " Show whitespace
 set listchars=tab:▸\ ,eol:¬,space:·
-set tabstop=4
 set list
 
+" Set tabs
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
 
 " VUNDLE
 set nocompatible              " be iMproved, required
@@ -135,6 +132,21 @@ Plugin 'tpope/vim-fugitive'
 " syntax checking
 Plugin 'scrooloose/syntastic'
 
+" Function tags
+Plugin 'majutsushi/tagbar'
+nmap <F8> :TagbarToggle<CR>
+
+" Indent lines
+Plugin 'Yggdroot/indentLine'
+"let g:indentLine_setColors = 0
+let g:indentLine_char = '¦'
+let g:indentLine_enabled = 1
+
+" Airline
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+let g:airline_theme='wombat'
+set laststatus=2
 
 " Finishing up
 call vundle#end()            " required
