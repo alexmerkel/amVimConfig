@@ -162,6 +162,7 @@ set laststatus=2
 " NERDTree
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+map <C-n> :NERDTreeToggle<CR>
 
 " EasyMotion
 Plugin 'easymotion/vim-easymotion'
