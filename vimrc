@@ -24,6 +24,15 @@ ino <down> <Nop>
 ino <left> <Nop>
 ino <right> <Nop>
 
+" Tab navigation
+nmap <C-Tab> :tabnext<CR>
+nmap <C-S-Tab> :tabprevious<CR>
+map <C-Tab> :tabnext<CR>
+map <C-S-Tab> :tabprevious<CR>
+imap <C-Tab> <ESC>:tabnext<CR>
+imap <C-S-Tab> <ESC>:tabprevious<CR>
+
+
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
@@ -115,6 +124,8 @@ set shiftwidth=4
 set expandtab
 set autoindent
 
+set cursorline
+
 " VUNDLE
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -147,6 +158,13 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 let g:airline_theme='wombat'
 set laststatus=2
+
+" NERDTree
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+" EasyMotion
+Plugin 'easymotion/vim-easymotion'
 
 " Finishing up
 call vundle#end()            " required
