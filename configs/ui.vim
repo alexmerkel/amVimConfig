@@ -9,8 +9,8 @@ set textwidth=100    " Line wrap (number of cols)
 set cursorline
 
 " Whitespace
-set listchars=tab:▸\ ,eol:¬,space:·
-set list " Show
+set listchars=tab:▸\ ,eol:¬,trail:·,nbsp:· " Set characters
+set list " Show whitespace
 
 " Search
 set showmatch    " Highlight matching brace
@@ -30,4 +30,3 @@ set background=dark
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
-
