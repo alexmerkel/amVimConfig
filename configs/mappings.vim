@@ -1,17 +1,30 @@
-"--------- Mappings -----------"
+    "--------- Mappings -----------"
 let mapleader = "," " Change leader to ,
 
-" Change arrow key functionality
-no <up> ddkP
-no <down> ddp
+" Move line
+no K ddkP
+no J ddp
+
+" Buffer navigation
+no <up> :up<CR>:bp<CR>
+no <down> :up<CR>:bn<CR>
+no <C-W> :up<CR>:bd<CR>
+if has("mac") || has("macunix")
+    no <D-W> <C-W>
+endif
+
+" Insert up/down keys as esc (down with save)
 ino <up> <ESC>
-ino <down> <ESC>:w
+ino <down> <ESC>:up<CR>
 
 " Tab naviagation
 no <left> :tabprevious<CR>
 no <right> :tabnext<CR>
-ino <left> <ESC>:tabprevious<CR>
-ino <right> <ESC>:tabnext<CR>
+no <C-S-W> :wa<CR>:tabclose<CR>
+if has("mac") || has("macunix")
+    no <D-S-W> <C-S-W>
+endif
+
 
 " Center jumps
 nmap G Gzz
