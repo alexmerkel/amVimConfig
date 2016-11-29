@@ -39,6 +39,11 @@ map <C-n> :NERDTreeToggle<CR>
 " EasyMotion
 Plugin 'easymotion/vim-easymotion'
 
+" Latex
+Plugin 'lervag/vimtex'
+let g:vimtex_latexmk_callback= 0
+let maplocalleader = ','
+
 " Finishing up
 call vundle#end()            " required
 filetype plugin indent on    " required
