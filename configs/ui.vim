@@ -5,7 +5,6 @@ set ruler    " Show row and column ruler information
 set showbreak=+++    " Wrap-broken line prefix
 set so=7    "7 lines to the cursor
 set linebreak    " Break lines at word
-set textwidth=100    " Line wrap (number of cols)
 set cursorline
 
 " Whitespace
