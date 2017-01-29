@@ -44,6 +44,12 @@ Plugin 'lervag/vimtex'
 let g:vimtex_latexmk_callback= 0
 let maplocalleader = ','
 
+" Emmet Plugin
+Plugin 'mattn/emmet-vim'
+
+" CSS3 Highlighting
+Plugin 'hail2u/vim-css3-syntax'
+
 " Finishing up
 call vundle#end()            " required
 filetype plugin indent on    " required
