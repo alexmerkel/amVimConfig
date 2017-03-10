@@ -6,7 +6,6 @@ set backspace=indent,eol,start    " Backspace behaviour
 let $LANG='en'
 set langmenu=en
 set encoding=utf8
-set clipboard=unnamed " Use macOS Clipboard
 set ffs=unix,dos,mac " unix file format
 
 " Turn backup off

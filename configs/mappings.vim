@@ -25,6 +25,10 @@ if has("mac") || has("macunix")
     no <D-S-W> <C-S-W>
 endif
 
+" Redo on Mac
+if has("mac") || has("macunix")
+    no <D-r> <C-r>
+endif
 
 " Center jumps
 nmap G Gzz
