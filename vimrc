@@ -11,6 +11,9 @@ source ~/.vim/configs/ui.vim
 " Mappings
 source ~/.vim/configs/mappings.vim
 
+" Commands
+source ~/.vim/configs/commands.vim
+
 " Functions
 source ~/.vim/configs/functions.vim
 

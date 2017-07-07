@@ -7,6 +7,7 @@ let $LANG='en'
 set langmenu=en
 set encoding=utf8
 set ffs=unix,dos,mac " unix file format
+set autoread
 
 " Turn backup off
 set nobackup

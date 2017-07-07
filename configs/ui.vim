@@ -29,3 +29,6 @@ set background=dark
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
+
+" Syntax
+au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif

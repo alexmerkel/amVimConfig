@@ -5,6 +5,7 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+command PluginUpgrade PluginUpdate
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -43,6 +44,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'lervag/vimtex'
 let g:vimtex_latexmk_callback= 0
 let maplocalleader = ','
+let g:tex_conceal = ''
 
 " Emmet Plugin
 Plugin 'mattn/emmet-vim'
