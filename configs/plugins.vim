@@ -42,7 +42,7 @@ Plugin 'easymotion/vim-easymotion'
 
 " Latex
 Plugin 'lervag/vimtex'
-let g:vimtex_latexmk_callback= 0
+let g:vimtex_compiler_latexmk = {'callback' : 0}
 let maplocalleader = ','
 let g:tex_conceal = ''
 

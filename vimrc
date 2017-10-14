@@ -19,3 +19,6 @@ source ~/.vim/configs/functions.vim
 
 " Plugins
 source ~/.vim/configs/plugins.vim
+
+" Filespecific
+source ~/.vim/configs/filespecific.vim
