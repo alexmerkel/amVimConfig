@@ -45,6 +45,7 @@ Plugin 'lervag/vimtex'
 let g:vimtex_compiler_latexmk = {'callback' : 0}
 let maplocalleader = ','
 let g:tex_conceal = ''
+let g:tex_flavor='latex'
 
 " Emmet Plugin
 Plugin 'mattn/emmet-vim'
