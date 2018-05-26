@@ -18,4 +18,8 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 Finally, open vim and type `:PluginInstall` to install the plugins.
 
-**DONE**
+
+#### Note
+For the best experience the terminal colors have to be set up correctly.
+To do this, follow the [instructions](https://github.com/ajh17/Spacegray.vim#terminal-environment)
+for the `spacegrey` color scheme used here.
