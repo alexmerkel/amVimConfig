@@ -53,6 +53,9 @@ Plugin 'mattn/emmet-vim'
 " CSS3 Highlighting
 Plugin 'hail2u/vim-css3-syntax'
 
+" NGINX Syntax
+Plugin 'chr4/nginx.vim'
+
 " Finishing up
 call vundle#end()            " required
 filetype plugin indent on    " required

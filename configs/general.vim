@@ -13,6 +13,7 @@ set autoread
 set nobackup
 set noswapfile
 set nowb
+let g:netrw_dirhistmax=0
 
 " Set tabs
 set tabstop=4
