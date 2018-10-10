@@ -56,6 +56,9 @@ Plugin 'hail2u/vim-css3-syntax'
 " NGINX Syntax
 Plugin 'chr4/nginx.vim'
 
+" Delphi Syntax
+Plugin 'rkennedy/vim-delphi'
+
 " Finishing up
 call vundle#end()            " required
 filetype plugin indent on    " required
