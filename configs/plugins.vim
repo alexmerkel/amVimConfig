@@ -59,6 +59,15 @@ Plugin 'chr4/nginx.vim'
 " Delphi Syntax
 Plugin 'rkennedy/vim-delphi'
 
+" Cheat.sh
+Plugin 'dbeniamine/cheat.sh-vim'
+
+" Markdown
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_conceal = 0
+
 " Finishing up
 call vundle#end()            " required
 filetype plugin indent on    " required
